@@ -1,3 +1,6 @@
 spring:
   application:
     name: Spring Boot - Hot reload in Docker w/ Debugger
+  devtools:
+    livereload:
+      enabled: true
