@@ -18,6 +18,8 @@ ENTRYPOINT ["java","-jar","/app.jar"]
 FROM builder AS dev
 
 RUN apt-get update && \
+    apt-get install -y inotify-tools && \
+    rm -rf /var/lib/apt/lists/* && \
     useradd -m spring && \
     chown -R spring:spring /app && \
     chmod -R 755 /app && \
